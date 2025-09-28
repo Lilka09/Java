@@ -1,0 +1,61 @@
+<html>
+<head>
+  <script type="text/javascript">
+    function okno_zamknij_pio() {
+      window.close();
+    }
+  </script>
+</head>
+<body>
+  <h2>Zadanie 4- Teoria JavaScript</h2>
+
+  <b>1) Kiedy powstał JavaScript (podaj datę).</b><br>
+  JavaScript został stworzony w 1995 roku,na mocy porozumienia z firmą 
+Sun Microsystems, w zamian za włączenie do przeglądarki Netscape obsługi technologii Java.<br><br>
+
+  <b>2) Dlaczego jest to język skryptowy?</b><br>
+  Nie musi skompilowany do kodu maszynowego, aby można było zobaczyć efekty jego działania. Wystarczy nam do tego przeglądarka internetowa, która ten język obsługuje.<br><br>
+
+  <b>3) Gdzie jest wykonywany JS (klient lub serwer)?</b><br>
+  JavaScript jest wykonywany głównie po stronie klienta (przeglądarka), ale dzięki Node.js także po stronie serwera.<br><br>
+
+  <b>4) Dlaczego JS to bezpieczne narzędzie?</b><br>
+  Ponieważ działa w piaskownicy przeglądarki i nie ma bezpośredniego dostępu do plików systemowych ani sprzętu użytkownika.<br><br>
+
+  <b>5) Czy jest to język obiektowy, jeśli tak to dlaczego?</b><br>
+  Tak, bo wykorzystuje definicje obiektów,metod, zdarzeń, które mogą być zastosowane do opisu właściwości obiektów. Autorzy JS zdefiniowali bardzo dużo obiektów, metod, zdarzeń.
+  <b>6) Wymień zalety JS:</b><br>
+  Zaleta1 - Jest prosty. Język ten uważa się więc za relatywnie łatwy do opanowania i rzeczywiście - nic nie stoi na przeszkodzie, aby zacząć używać go już po kilku minutach od rozpoczęcia nauki. <br>
+  Zaleta2 - Pomaga użytkownikom tworzyć nowoczesne aplikacje internetowe do bezpośredniej interakcji bez ponownego ładowania strony za każdym razem.<br>
+  Zaleta3 - pozwala on na odciążenie serwerów i ograniczenie ilości zbędnych danych przesyłanych pomiędzy nimi a przeglądarką klienta.<br><br>
+
+  <b>7) Framework to:</b><br>
+  Rodzaj programu do tworzenia innych programów  w JS.<br><br>
+
+  <b>8) Do aplikacji mobilnych można użyć Framework:</b><br>
+  Zostały stworzone znane na całym świecie aplikacje, np. Google używa Angular, a Facebook — React<br><br>
+
+  <b>9) Aplikacje responsywne to:</b><br>
+  udostępnia metody, których można użyć w aplikacji, aby uzyskać bieżący rozmiar ekranu i wykorzystać wynik do wykonania działań w oparciu o ten rozmiar. Używając CSS i HTML można zmienić rozmiar, ukrywać, zmniejszać, powiększać lub przenosić treści, aby wyglądały dobrze na dowolnym ekranie.<br><br>
+
+  <b>10) Przepisz linię kodu i wytłumaczenie jak działa ten fragment kodu:</b><br>
+  <code>&lsaquo;input type="button" name="przycisk" value="Nowa Strona" onclick="WinOpen(' ')"&rsaquo;</code><br>
+  Tworzy przycisk z napisem „Nowa Strona”. Po kliknięciu uruchamiana jest funkcja <code>WinOpen(' ')</code>, która otwiera nowe okno.<br><br>
+
+  <b>11) Przepisz linię kodu i wytłumacz:</b><br>
+  <code>window.open("obraz.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");</code><br>
+  Otwiera nowe okno z plikiem <i>obraz.html</i> i ustawia jego parametry:<br>
+  • <b>toolbar=no</b> - ukrywa pasek narzędzi.<br>
+  • <b>directories=no</b> - ukrywa przyciski katalogów (w starych przeglądarkach).<br>
+  • <b>menubar=no</b> - ukrywa pasek menu (Plik, Edycja, Widok itp.).<br>
+  • <b>height=280</b> - wysokość okna 280 pikseli.<br>
+  • <b>width=160</b> - szerokość okna 160 pikseli.<br>
+  • <b>top=200</b> - odległość od górnej krawędzi ekranu 200 pikseli.<br>
+  • <b>left=200</b> - odległość od lewej krawędzi ekranu 200 pikseli.<br><br>
+
+  <b>12) Opisz następującą instrukcję <code>window.close()</code></b><br>
+  Instrukcja <code>window.close()</code> zamyka bieżące okno przeglądarki lub okno otwarte wcześniej przy pomocy <code>window.open()</code>.<br><br>
+
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_pio()"/>
+</body>
+</html>
