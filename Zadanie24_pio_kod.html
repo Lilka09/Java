@@ -1,0 +1,38 @@
+
+<html> 
+   <body> 
+     <textarea cols="110" rows="35">
+<!DOCTYPE html>   
+<head>    
+<title> Piotrowska 3F</title>    
+<meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color:red;font-size:30px;"> 
+<script language="JavaScript"> 
+var liczba1=prompt("liczba1=",""); 
+var liczba2=prompt("liczba2=","");  
+var x1_pio=parseFloat(liczba1); 
+var x2_pio=parseFloat(liczba2); 
+
+document.write("x1= "+x1_pio+" &nbsp&nbsp&nbsp&nbsp&nbsp "+"x2= "+x2_pio+"<br>  ");
+
+var y1_pio=3*Math.pow(x1_pio,6/8);
+document.write("y1="+y1_pio.toFixed(2)+" <br>  ");
+rad_x1_pio=(x1_pio*Math.PI)/180;
+
+var y2_pio=2*Math.cos(rad_x1_pio)+3*Math.sin(rad_x1_pio);
+document.write("y2="+y2_pio.toFixed(2)+"<br>");
+akuku=Math.pow(x1_pio,5)+2*Math.pow(x2_pio,4);
+
+var y3_pio=Math.pow(akuku,1/3)*Math.abs(x1_pio-x2_pio);
+document.write("y3="+y3_pio.toFixed(2)+"<br> ")
+
+document.write("x1 = "+x1_pio+" &nbsp&nbsp&nbsp "+"x1 = " +rad_x1_pio.toFixed(2)+"<br>");
+
+</script> 
+</div> 
+</body> 
+</html> 
+     </textarea>
+   </body>  

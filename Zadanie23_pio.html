@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Piotrowska 3F - Zadanie 23</title>
+</head>
+<body>
+
+<h2>Obliczanie odległości od drabiny i kąta</h2>
+
+<form>
+    Podaj d = <input type="text" id="d_pio"> &nbsp;&nbsp;
+    Podaj x = <input type="text" id="x_pio"><br><br>
+
+    <input type="button" value="oblicz" onclick="oblicz_pio()"><br><br>
+
+    Drabina = <input type="text" id="drabina_pio" readonly>
+    &nbsp;&nbsp;
+    Alfa = <input type="text" id="alfa_pio" readonly>
+</form>
+
+<script type="text/javascript">
+    // funkcja licząca długość drabiny (Pitagoras)
+    function drabina_pio(d_pio, x_pio) {
+        return Math.sqrt(Math.pow(d_pio, 2) + Math.pow(x_pio, 2));
+    }
+
+    // funkcja licząca kąt w stopniach (arcustangens, zamiana radianów na stopnie)
+    function kat_pio(d_pio, x_pio) {
+        var alfa_rad = Math.atan(d_pio / x_pio);       // arctg(D/X)
+        var alfa_deg = alfa_rad * 180 / Math.PI;       // rad → stopnie
+        return alfa_deg;
+    }
+
+    function oblicz_pio() {
+        var d_pio = parseFloat(document.getElementById("d_pio").value);
+        var x_pio = parseFloat(document.getElementById("x_pio").value);
+
+        var dlugosc = drabina_pio(d_pio, x_pio);
+        var kat = kat_pio(d_pio, x_pio);
+
+        document.getElementById("drabina_pio").value = dlugosc.toFixed(2);
+        document.getElementById("alfa_pio").value = kat.toFixed(2);
+    }
+</script>
+
+</body>
+</html>

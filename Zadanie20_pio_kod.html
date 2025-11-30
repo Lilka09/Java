@@ -1,0 +1,86 @@
+<html> 
+   <body> 
+     <textarea cols="110" rows="90">
+<html>
+<head>
+<title>Zadanie 20</title>
+<meta charset="UTF-8">
+<script language="JavaScript">
+
+function AB_pio(xa_pio, ya_pio, xb_pio, yb_pio) {
+  xa_pio = parseFloat(xa_pio);
+  ya_pio = parseFloat(ya_pio);
+  xb_pio = parseFloat(xb_pio);
+  yb_pio = parseFloat(yb_pio);
+
+  var ab = Math.sqrt(Math.pow(xb_pio - xa_pio, 2) + Math.pow(yb_pio - ya_pio, 2));
+  document.getElementsByName('AB')[0].value = ab.toFixed(2);
+  alert("Długość AB = " + ab.toFixed(2));
+  wynik_AB.innerHTML = "AB = " + ab.toFixed(2);
+}
+
+function BC_pio(xb_pio, yb_pio, xc_pio, yc_pio) {
+  xb_pio = parseFloat(xb_pio);
+  yb_pio = parseFloat(yb_pio);
+  xc_pio = parseFloat(xc_pio);
+  yc_pio = parseFloat(yc_pio);
+
+  var bc = Math.sqrt(Math.pow(xc_pio - xb_pio, 2) + Math.pow(yc_pio - yb_pio, 2));
+  document.getElementsByName('BC')[0].value = bc.toFixed(2);
+  alert("Długość BC = " + bc.toFixed(2));
+  wynik_BC.innerHTML = "BC = " + bc.toFixed(2);
+}
+
+function AC_pio(xa_pio, ya_pio, xc_pio, yc_pio) {
+  xa_pio = parseFloat(xa_pio);
+  ya_pio = parseFloat(ya_pio);
+  xc_pio = parseFloat(xc_pio);
+  yc_pio = parseFloat(yc_pio);
+
+  var ac = Math.sqrt(Math.pow(xc_pio - xa_pio, 2) + Math.pow(yc_pio - ya_pio, 2));
+  document.getElementsByName('AC')[0].value = ac.toFixed(2);
+  alert("Długość AC = " + ac.toFixed(2));
+  wynik_AC.innerHTML = "AC = " + ac.toFixed(2);
+}
+
+function oblicz_wszystko(form) {
+  AB_pio(form.xa_pio.value, form.ya_pio.value, form.xb_pio.value, form.yb_pio.value);
+  BC_pio(form.xb_pio.value, form.yb_pio.value, form.xc_pio.value, form.yc_pio.value);
+  AC_pio(form.xa_pio.value, form.ya_pio.value, form.xc_pio.value, form.yc_pio.value);
+  return false;
+}
+
+function okno_zamknij_pio() {
+  window.close();
+}
+
+</script>
+</head>
+<body>
+<h3>Obliczanie długości boków trójkąta</h3>
+
+<form name="formularz" onsubmit="return oblicz_wszystko(this)">
+Punkt A: xa=<input size="4" name="xa_pio"> ya=<input size="4" name="ya_pio"><br><br>
+Punkt B: xb=<input size="4" name="xb_pio"> yb=<input size="4" name="yb_pio"><br><br>
+Punkt C: xc=<input size="4" name="xc_pio"> yc=<input size="4" name="yc_pio"><br><br>
+
+<input type="submit" value="Oblicz boki"><br><br>
+
+AB=<input size="6" name="AB">  
+BC=<input size="6" name="BC">  
+AC=<input size="6" name="AC">
+</form>
+
+<table>
+<tr id="wynik_AB"></tr>
+<tr id="wynik_BC"></tr>
+<tr id="wynik_AC"></tr>
+</table>
+
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_pio()"/>
+</body>
+</html>
+     </textarea> 
+   </body>  
+</html>

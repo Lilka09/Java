@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pole i obwód prostokąta - Piotrowska</title>
+</head>
+<body>
+
+<h2>Pole i obwód prostokąta</h2>
+
+<form>
+    a: <input type="text" id="a_dana_pio" name="a_dana_pio"><br><br>
+    b: <input type="text" id="b_dana_pio" name="b_dana_pio"><br><br>
+
+    <input type="button" value="Oblicz" onclick="oblicz_pio()">
+</form>
+
+<br>
+
+<table border="1">
+    <tr>
+        
+        <td id="wyprowadz_pole_pio">Pole:</td>
+        
+        <td><input type="text" id="pole" name="pole" readonly></td>
+    </tr>
+    <tr>
+        
+        <td id="wyprowadz_obwod_pio">Obwód:</td>
+        
+        <td><input type="text" id="obw" name="obw" readonly></td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+   
+    function Pole_piotrowska(a_pio, b_pio) {
+        return a_pio * b_pio;
+    }
+
+    function obwod_piotrowska(a_pio, b_pio) {
+        return 2 * (a_pio + b_pio);
+    }
+
+    function oblicz_pio() {
+        var a_pio = parseFloat(document.getElementById("a_dana_pio").value);
+        var b_pio = parseFloat(document.getElementById("b_dana_pio").value);
+
+        var pole_prostokata = Pole_piotrowska(a_pio, b_pio);
+        var obwod_prostokata = obwod_piotrowska(a_pio, b_pio);
+
+        document.getElementById("pole").value = pole_prostokata;
+        document.getElementById("obw").value = obwod_prostokata;
+    }
+</script>
+
+</body>
+</html>

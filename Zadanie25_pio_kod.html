@@ -1,0 +1,38 @@
+<html> 
+   <body> 
+     <textarea cols="110" rows="40">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Piotrowska 3F</title>
+</head>
+<body>
+<div style="color:blue;font-size:24px;">
+
+<script language="JavaScript">
+//Autor: Piotrowska 3F
+
+
+var N0_pio = parseFloat(prompt("Podaj ilość początkową N0:",""));
+var t_pio  = parseFloat(prompt("Podaj czas t:",""));
+var T12_pio = parseFloat(prompt("Podaj okres połowicznego zaniku T1/2:",""));
+
+var lambda_pio = Math.log(2) / T12_pio;  
+
+var N_pio = N0_pio * Math.pow(Math.E, -lambda_pio * t_pio); 
+
+document.write("N0=" + N0_pio.toFixed(2) + " [sztuk]<br>");
+document.write("t="  + t_pio.toFixed(2)  + " [lat]<br>");
+document.write("T1/2=" + T12_pio.toFixed(2) + " [lat]<br>");
+document.write("Lambda=" + lambda_pio.toFixed(7) + " [1/rok]<br>");
+document.write("N=" + N_pio.toFixed(6) + " [sztuk]<br>");
+
+</script>
+
+</div>
+</body>
+</html> 
+     </textarea>
+   </body>
+</html>
