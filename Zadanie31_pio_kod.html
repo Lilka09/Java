@@ -1,0 +1,44 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="40">
+<html>
+<head>
+<script type="text/javascript">
+
+var Pociag = {
+    ile_wagonow: 12,
+    typ: 'InterCity',
+    trasa: 'Gdansk - Warszawa',
+
+    Pociag_wyswietl_piotrowska: function ()
+    {
+        document.write(
+            'Wagony: ' + this.ile_wagonow + '<br>' +
+            'Typ: ' + this.typ + '<br>' +
+            'Trasa: ' + this.trasa + '<br>'
+        );
+    }
+}
+
+Pociag.Pociag_wyswietl_piotrowska();
+
+Pociag.CzasPodrozy = 180;
+
+Pociag.pociag_pokaz_piotrowska = function ()
+{
+    alert('Czas podróży: ' + this.CzasPodrozy + ' minut');
+}
+
+Pociag.pociag_pokaz_piotrowska();
+
+</script>
+</head>
+
+<body>
+<br>
+programowanie obiektowe
+</body>
+</html>
+</html>
+     </textarea> 
+   </body> 

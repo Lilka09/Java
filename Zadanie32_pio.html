@@ -1,0 +1,58 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function Pociag_konstruktor(ile_wagonow_k, typ_k, trasa_k) // konstruktor
+{
+    this.ile_wagonow = ile_wagonow_k;
+    this.typ = typ_k;
+    this.trasa = trasa_k;
+}
+
+// metoda 1 – wypisywanie danych (jak w Autobusie)
+Pociag_konstruktor.prototype.Pociag_wyswietl_piotrowska = function ()
+{
+    document.write(
+        'Wagony: ' + this.ile_wagonow + '<br>' +
+        'Typ: ' + this.typ + '<br>' +
+        'Trasa: ' + this.trasa + '<br>'
+    );
+};
+
+// metoda 2 – czas podróży
+Pociag_konstruktor.prototype.pociag_pokaz_piotrowska = function ()
+{
+    alert('Czas podróży: ' + this.CzasPodrozy + ' minut');
+};
+
+
+var Pociag1 = new Pociag_konstruktor(12, 'InterCity', 'Gdansk - Warszawa');
+var Pociag2 = new Pociag_konstruktor(17, 'Pendolino', 'Sopot - Katowice');
+
+
+Pociag1.CzasPodrozy = 180;
+Pociag2.CzasPodrozy = 360;
+
+Pociag1.Pociag_wyswietl_piotrowska();
+Pociag2.Pociag_wyswietl_piotrowska();
+
+Pociag1.pociag_pokaz_piotrowska();
+Pociag2.pociag_pokaz_piotrowska();
+
+
+document.write("<br>Dostęp do właściwości<br>");
+document.write("Pociag pierwszy: "
+    + Pociag1.ile_wagonow + " "
+    + Pociag1.typ + " "
+    + Pociag1.trasa + " "
+    + Pociag1.CzasPodrozy + " minut"
+);
+
+</script>
+</head>
+
+<body>
+<br>
+programowanie obiektowe
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie – JavaScript obiekty</title>
+</head>
+<body>
+
+
+<h1>1. W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)?</h1>
+
+<h1>Sposób 1 – zapis z kropką:</h1>
+<h1>auto.marka = "Opel";</h1>
+<h1>auto.rok = 2005;</h1>
+
+<h1>Sposób 2 – zapis w nawiasach:</h1>
+<h1>auto["cena"] = 25000;</h1>
+
+<h1>2. W jaki sposób można odwołać się do pól (właściwości) i metod?</h1>
+<h1>console.log(samochod.kolor);</h1>
+<h1>samochod.start();</h1>
+
+<h1>3. Wymień cechy charakterystyczne konstruktora.</h1>
+<h1>- Wywołuje się automatycznie przy tworzeniu obiektu</h1>
+<h1>- Ma taką samą nazwę jak funkcja tworząca obiekt</h1>
+<h1>- Nie zwraca wartości</h1>
+<h1>- Może przyjmować argumenty</h1>
+<h1>- Tworzy obiekt przy użyciu słowa new</h1>
+
+<h1>4. Konstruowanie obiektu na podstawie przykładu – obiekt ma trzy pola oraz jedną metodę.</h1>
+
+<h1>
+var osoba = { <br>
+nazwisko: "Kowalski", <br>
+imie: "Jan", <br>
+zawod: "piekarz", <br>
+wyswietl: function() { <br>
+document.write(this.nazwisko + " " + this.imie); <br>
+} <br>
+}
+</h1>
+
+<h1>5. Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h1>
+<h1>Słowo this odnosi się do aktualnego obiektu i pozwala korzystać z jego pól i metod.</h1>
+<h1>Pola i metody oddzielamy przecinkami.</h1>
+
+<h1>6. Konstruktor w JS na podstawie przykładu wraz z opisem.</h1>
+
+<h1>
+function Klient(nazwisko, imie, zawod) { <br>
+this.nazwisko = nazwisko; <br>
+this.imie = imie; <br>
+this.zawod = zawod; <br>
+this.wypisz = function() { <br>
+alert(this.nazwisko + " " + this.imie); <br>
+} <br>
+}
+</h1>
+
+<h1>Opis: Konstruktor tworzy obiekt i przypisuje wartości do jego właściwości.</h1>
+
+<h1>7. Znaczenie słowa kluczowego new wraz z przykładem.</h1>
+<h1>Słowo new tworzy nowy obiekt na podstawie konstruktora.</h1>
+
+<h1>
+var osoba1 = new Klient("Kowalski", "Jan", "kierowca"); <br>
+var osoba2 = new Klient("Nowak", "Anna", "sekretarka");
+</h1>
+
+<h1>8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem.</h1>
+
+<h1><b>Prototype pozwala dodawać nowe właściwości i metody do wszystkich obiektów utworzonych z danego konstruktora.</b></h1>
+
+<h1>
+function Klient() { <br>
+this.nazwisko = "Bielski"; <br>
+this.imie = "Pawel"; <br>
+} <br><br>
+
+Klient.prototype.zawod = "kierowca"; <br>
+
+Klient.prototype.pisz = function() { <br>
+document.write(this.nazwisko + " " + this.imie); <br>
+}
+</h1>
+
+<h1>Opis: Metody i właściwości dodane przez prototype będą dostępne we wszystkich nowych obiektach tej klasy.</h1>
+
+</body>
+</html>

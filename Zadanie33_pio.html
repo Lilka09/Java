@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+function User(email_k, password_k, avatar_k)
+{
+    this.email = email_k;
+    this.password = password_k;
+    this.avatar = avatar_k;
+}
+
+var userList = {
+
+    users: [],
+
+    addUser: function(user_k)
+    {
+        this.users.push(user_k);
+    },
+
+    login: function(email_k, password_k)
+    {
+        for (var i = 0; i < this.users.length; i++)
+        {
+            if (this.users[i].email === email_k &&
+                this.users[i].password === password_k)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+};
+
+
+var u1 = new User("admin@test.pl", "1234", "avatar1.png");
+var u2 = new User("user@test.pl", "abcd", "avatar2.png");
+
+userList.addUser(u1);
+userList.addUser(u2);
+
+
+function sprawdzLogowanie()
+{
+    var email = document.getElementById("login").value;
+    var pass = document.getElementById("haslo").value;
+
+    var wynik = userList.login(email, pass);
+
+    if (wynik === true)
+    {
+        alert("Zalogowano poprawnie ✔");
+    }
+    else
+    {
+        alert("Błędny login lub hasło ✖");
+    }
+}
+
+</script>
+</head>
+
+
+<body>
+
+<h2>Logowanie</h2>
+
+<form onsubmit="sprawdzLogowanie(); return false;">
+    Login (email): <br>
+    <input type="text" id="login"><br><br>
+
+    Hasło: <br>
+    <input type="password" id="haslo"><br><br>
+
+    <input type="submit" value="Zaloguj">
+</form>
+
+</body>
+</html>
