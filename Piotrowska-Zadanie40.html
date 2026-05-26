@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+<meta charset="UTF-8">
+<title>Piotrowska Z40_JS</title>
+</head>
+
+<body>
+
+<div style="color:red;font-size:50px;">
+
+<script language="JavaScript">
+
+    var x = prompt("podaj argument x=", "");
+    var x_pio = parseFloat(x);
+
+    document.write("wykonała Liliana Piotrowska<br>");
+    document.write("czytany argument x=" + x_pio.toFixed(2) + "<br>");
+
+    function f_pio(x_pio)
+    {
+        if (x_pio >= 2)
+        {
+            return 9;
+        }
+
+        if ((x_pio > -2) && (x_pio < 0))
+        {
+            return (x_pio + 1) * (x_pio + 1);
+        }
+
+        if ((x_pio >= 0) && (x_pio < 2))
+        {
+            return x_pio * x_pio * x_pio + 1;
+        }
+
+        if (x_pio <= -2)
+        {
+            return 1;
+        }
+    }
+
+    document.write("f(" + x_pio.toFixed(2) + ")=" + f_pio(x_pio).toFixed(2) + "<br>");
+
+</script>
+
+</div>
+
+</body>
+</html>
+
+<!-- Piotrowska Z40_JS -->
