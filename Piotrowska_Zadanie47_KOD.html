@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <META HTTP-EQUIV="content-type" CONTENT="text/html">
+    <meta charset="utf-8">
+</head>
+<body>
+    <textarea cols="120" rows="40">
+     html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 47</title>
+</head>
+
+<body>
+
+    <script language="JavaScript">
+
+        let dana_pio = prompt("Podaj liczbę:", "");
+        dana_pio = parseInt(dana_pio);
+
+        let ile_razy_pio = 12;
+        let wielkosc_liter_pio = 41;
+
+        document.write("ilość wykonania pętli = " + ile_razy_pio + "<br>");
+        document.write("wielkość liter = " + wielkosc_liter_pio + "px<br><br>");
+
+        for (let i_p = 1; i_p <= ile_razy_pio; i_p++)
+        {
+            if (dana_pio % 2 == 0)
+            {
+                document.write("<span style='color:blue; font-size:" + wielkosc_liter_pio + "px;'>");
+                document.write(i_p + ". Piotrowska");
+                document.write("</span><br>");
+            }
+            else
+            {
+                document.write("<span style='color:green; font-size:" + wielkosc_liter_pio + "px;'>");
+                document.write(i_p + ". Liliana");
+                document.write("</span><br>");
+            }
+        }
+
+    </script>
+
+</body>
+</html>
+    </textarea>
+</body>            

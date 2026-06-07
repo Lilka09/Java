@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <META HTTP-EQUIV="content-type" CONTENT="text/html">
+    <meta charset="utf-8">
+</head>
+<body>
+    <textarea cols="120" rows="30">
+    <!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 55</title>
+</head>
+<body>
+
+<script>
+var a_pio = parseInt(prompt("Podaj wysokość a:"));
+var b_pio = parseInt(prompt("Podaj szerokość b:"));
+
+var wiersz_pio = "*";
+
+for (var i_pio = 1; i_pio <= b_pio; i_pio++)
+{
+    document.write("*");
+}
+
+document.write("<br>");
+for (var i_pio = 1; i_pio <= (b_pio - 2); i_pio++)
+{
+    wiersz_pio = wiersz_pio + "&nbsp;&nbsp;";
+}
+
+wiersz_pio = wiersz_pio + "*";
+for (var i_pio = 1; i_pio <= (a_pio - 2); i_pio++)
+{
+    document.write(wiersz_pio);
+    document.write("<br>");
+}
+for (var i_pio = 1; i_pio <= b_pio; i_pio++)
+{
+    document.write("*");
+}
+</script>
+
+</body>
+</html>
+    </textarea>
+</body>         
+</html>    

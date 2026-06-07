@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <META HTTP-EQUIV="content-type" CONTENT="text/html">
+    <meta charset="utf-8">
+</head>
+<body>
+    <textarea cols="120" rows="30">
+       <!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 57 - Piotrowska</title>
+</head>
+<body>
+
+<script>
+
+var l1_t_pio;
+var l2_t_pio;
+do
+{
+    l1_t_pio = parseInt(prompt("Podaj liczbę l1 z przedziału <20,60>:"));
+
+    if(l1_t_pio < 20 || l1_t_pio > 60)
+    {
+        document.write("Liczba l1 nie należy do przedziału &lt;20,60&gt;<br>");
+    }
+
+}
+while(l1_t_pio < 20 || l1_t_pio > 60);
+do
+{
+    l2_t_pio = parseInt(prompt("Podaj liczbę l2 z przedziału <20,60>:"));
+
+    if(l2_t_pio < 20 || l2_t_pio > 60)
+    {
+        document.write("Liczba l2 nie należy do przedziału &lt;20,60&gt;<br>");
+    }
+
+}
+while(l2_t_pio < 20 || l2_t_pio > 60);
+var pocz_pio = parseInt(prompt("Podaj początkową wielkość tekstu:"));
+
+var tekst_pio = prompt("Podaj dowolny tekst:");
+
+if(l1_t_pio < l2_t_pio)
+{
+    for(var i = pocz_pio; i <= 100; i = i + 5)
+    {
+        document.write("<p style=\"font-size:"+i+"px; color:black;\"><br>"+tekst_pio+"<br></p>");
+    }
+}
+
+else if(l2_t_pio < l1_t_pio)
+{
+    for(var i = pocz_pio; i >= 0; i = i - 5)
+    {
+        document.write("<p style=\"font-size:"+i+"px; color:black;\"><br>"+tekst_pio+"<br></p>");
+    }
+}
+
+else
+{
+    document.write("<p style=\"font-size:"+pocz_pio+"px; color:black;\"><br>"+tekst_pio+"<br></p>");
+}
+
+</script>
+
+</body>
+</html> 
+    </textarea>
+</body> 
+</html>

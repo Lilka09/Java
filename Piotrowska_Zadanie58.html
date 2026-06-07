@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 58 - Piotrowska</title>
+</head>
+<body>
+
+<script>
+
+var w_pio;
+
+for(var i_pio = 0; i_pio <= 39; i_pio++)
+{
+    w_pio = i_pio * i_pio + i_pio + 41;
+
+    document.write(
+        "i=" + i_pio +
+        " w(" + i_pio + ")=" + w_pio +
+        "<br>"
+    );
+
+    if((i_pio + 1) % 5 == 0)
+    {
+        alert("Naciśnij OK, aby wyświetlić kolejne 5 liczb.");
+    }
+}
+
+</script>
+
+</body>
+</html>

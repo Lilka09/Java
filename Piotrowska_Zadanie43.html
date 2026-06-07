@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 43</title>
+</head>
+<body>
+
+    <h1>Zadanie 43</h1>
+    <h2>Temat: Teoria dotycząca pętli w JavaScript</h2>
+
+    <hr>
+
+    <h2>Rodzaje pętli</h2>
+
+    <h3>1. Pętla for</h3>
+
+    <h4>Nazwa pętli:</h4>
+    <p><b>Pętla for</b></p>
+
+    <h4>Konstrukcja:</h4>
+    <pre>
+for (zainicjowanie_zmiennej; warunek_kończący_wykonywanie_pętli; zmiana_zmiennej)
+{
+    instrukcje do wykonania;
+}
+    </pre>
+
+    <h4>Opis:</h4>
+    <p>
+        Pętla <b>for</b> jest stosowana wtedy, gdy z góry wiadomo,
+        ile razy dany fragment kodu ma zostać wykonany.
+        Najpierw następuje zainicjowanie zmiennej, następnie sprawdzany jest warunek.
+        Jeśli warunek jest prawdziwy, wykonywane są instrukcje znajdujące się w pętli.
+        Po wykonaniu instrukcji następuje zmiana zmiennej, na przykład zwiększenie jej o 1.
+    </p>
+
+    <h4>Przykład w JavaScript:</h4>
+    <pre>
+for (let i = 1; i <= 5; i++)
+{
+    document.write("To jest powtórzenie numer: " + i + "&lt;br&gt;");
+}
+    </pre>
+
+    <h4>Schemat blokowy:</h4>
+    <pre>
+START
+  |
+i = wartość początkowa
+  |
+Czy i spełnia warunek?
+  | TAK
+Wykonaj instrukcje
+  |
+Zmień wartość i
+  |
+Powrót do sprawdzenia warunku
+  |
+NIE
+  |
+KONIEC
+    </pre>
+
+    <hr>
+
+    <h3>2. Pętla while — z kontrolowanym wejściem</h3>
+
+    <h4>Nazwa pętli:</h4>
+    <p><b>Pętla while</b></p>
+
+    <h4>Konstrukcja:</h4>
+    <pre>
+while (warunek)
+{
+    instrukcje do wykonania;
+}
+    </pre>
+
+    <h4>Opis:</h4>
+    <p>
+        Pętla <b>while</b> jest pętlą z kontrolowanym wejściem.
+        Oznacza to, że warunek sprawdzany jest przed wykonaniem instrukcji.
+        Jeśli warunek jest prawdziwy, pętla wykona instrukcje.
+        Jeśli warunek od początku jest fałszywy, pętla nie wykona się ani razu.
+    </p>
+
+    <h4>Przykład w JavaScript:</h4>
+    <pre>
+let i = 1;
+
+while (i <= 5)
+{
+    document.write("Liczba: " + i + "&lt;br&gt;");
+    i++;
+}
+    </pre>
+
+    <h4>Schemat blokowy:</h4>
+    <pre>
+START
+  |
+Sprawdź warunek
+  |
+Czy warunek jest prawdziwy?
+  | TAK
+Wykonaj instrukcje
+  |
+Powrót do sprawdzenia warunku
+  |
+NIE
+  |
+KONIEC
+    </pre>
+
+    <hr>
+
+    <h3>3. Pętla do while — z kontrolowanym wyjściem</h3>
+
+    <h4>Nazwa pętli:</h4>
+    <p><b>Pętla do while</b></p>
+
+    <h4>Konstrukcja:</h4>
+    <pre>
+do
+{
+    instrukcje do wykonania;
+}
+while (warunek);
+    </pre>
+
+    <h4>Opis:</h4>
+    <p>
+        Pętla <b>do while</b> jest pętlą z kontrolowanym wyjściem.
+        Oznacza to, że najpierw wykonywane są instrukcje,
+        a dopiero potem sprawdzany jest warunek.
+        Dzięki temu pętla <b>do while</b> zawsze wykona się przynajmniej jeden raz,
+        nawet wtedy, gdy warunek jest fałszywy.
+    </p>
+
+    <h4>Przykład w JavaScript:</h4>
+    <pre>
+let i = 1;
+
+do
+{
+    document.write("Liczba: " + i + "&lt;br&gt;");
+    i++;
+}
+while (i <= 5);
+    </pre>
+
+    <h4>Schemat blokowy:</h4>
+    <pre>
+START
+  |
+Wykonaj instrukcje
+  |
+Sprawdź warunek
+  |
+Czy warunek jest prawdziwy?
+  | TAK
+Powrót do wykonania instrukcji
+  |
+NIE
+  |
+KONIEC
+    </pre>
+
+</body>
+</html>

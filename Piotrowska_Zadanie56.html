@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 56 - Piotrowska</title>
+</head>
+<body>
+
+<script>
+
+var imie_pio = prompt("Podaj imię:");
+var nazwisko_pio = prompt("Podaj nazwisko:");
+
+var a_pio = (nazwisko_pio.length % 4) + 5;
+var b_pio = (imie_pio.length % 6) + 20;
+for(var i_pio = 1; i_pio <= b_pio; i_pio++)
+{
+    document.write("*");
+}
+
+document.write("<br>");
+for(var i_pio = 1; i_pio <= a_pio - 2; i_pio++)
+{
+    document.write("*");
+
+    for(var j_pio = 1; j_pio <= b_pio - 2; j_pio++)
+    {
+        document.write("&nbsp;&nbsp;");
+    }
+
+    document.write("*<br>");
+}
+for(var i_pio = 1; i_pio <= b_pio; i_pio++)
+{
+    document.write("*");
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:blue;font-size:40px;">
+<script>
+do
+{
+    var liczba1_pio = prompt("Podaj bok a=","");
+    var a_pio = parseFloat(liczba1_pio);
+
+    var liczba2_pio = prompt("Podaj bok b=","");
+    var b_pio = parseFloat(liczba2_pio);
+
+    var liczba3_pio = prompt("Podaj bok c=","");
+    var c_pio = parseFloat(liczba3_pio);
+
+}
+while(!(a_pio > 0 && b_pio > 0 && c_pio > 0 &&
+        a_pio + b_pio > c_pio &&
+        a_pio + c_pio > b_pio &&
+        b_pio + c_pio > a_pio));
+
+document.write("Boki tworzą trójkąt.<br>");
+document.write("a = " + a_pio + "<br>");
+document.write("b = " + b_pio + "<br>");
+document.write("c = " + c_pio + "<br>");
+</script>
+</div>
+</body>
+</html>
